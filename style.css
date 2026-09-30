@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -14,4 +15,23 @@ body {
   margin: auto;
   padding: 35px 20px;
 }
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7f6;
+  color: #18352f;
+}
+
+.app {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
 
