@@ -1,20 +1,19 @@
-const { useState, useEffect } = React;
+const habitInput = document.getElementById("habitInput");
+const addBtn = document.getElementById("addBtn");
+const habitList = document.getElementById("habitList");
 
-const today = new Date().toISOString().slice(0, 10);
+function addHabit() {
+  const habitName = habitInput.value.trim();
 
-function getStreak(doneDates) {
-  const dates = new Set(doneDates);
-  let streak = 0;
-  let date = new Date();
-
-  if (!dates.has(today)) {
-    date.setDate(date.getDate() - 1);
+  if (habitName === "") {
+    alert("Please enter a habit!");
+    return;
   }
+  const habitItem = document.createElement("li");
 
-  while (dates.has(date.toISOString().slice(0, 10))) {
-    streak++;
-    date.setDate(date.getDate() - 1);
-  }
+  const habitText = document.createElement("span");
+  habitText.textContent = habitName;
 
-  return streak;
-}
+  habitText.addEventListener("click", () => {
+    habitItem.classList.toggle("completed");
+  });
