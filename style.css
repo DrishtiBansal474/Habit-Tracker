@@ -29,3 +29,10 @@ h1 {
   gap: 10px;
   margin-bottom: 20px;
 }
+input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  font-size: 16px;
+}
